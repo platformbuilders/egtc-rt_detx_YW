@@ -1,0 +1,42 @@
+# Prompts para YOLO-World detectar EPIs
+# YOLO-World usa open-vocabulary, então podemos usar descrições em inglês
+# Mantenha em inglês para melhor performance dos modelos
+
+positive:
+  # Capacete (apenas genérico - cor é detectada via análise de pixels)
+  helmet: ["helmet", "hard hat", "safety helmet", "construction helmet"]
+  
+  # Cores específicas comentadas - agora detectadas via análise de pixels
+  # Isso reduz o número de prompts e melhora a performance
+  # helmet_red: ["red helmet", "red hard hat", "red safety helmet"]
+  # helmet_blue: ["blue helmet", "blue hard hat", "blue safety helmet"]
+  # helmet_yellow: ["yellow helmet", "yellow hard hat", "yellow safety helmet"]
+  # helmet_white: ["white helmet", "white hard hat", "white safety helmet"]
+  # helmet_brown: ["brown helmet", "brown hard hat", "brown safety helmet"]
+  
+  # Luvas
+  gloves: ["gloves", "safety gloves", "work gloves", "protective gloves"]
+  
+  # Proteção auricular
+  ear_protection: ["ear protection", "ear muffs", "ear defenders", "hearing protection", "earplugs"]
+  
+  # Colete refletivo / Roupa refletiva / Uniforme de alta visibilidade
+  vest: ["safety vest", "reflective vest", "high visibility vest", "reflective jacket", "safety jacket", "hi-vis vest", 
+         "reflective clothing", "reflective garment", "high visibility clothing", "hi-vis clothing", 
+         "reflective shirt", "safety clothing", "visibility vest", "reflective workwear",
+         "high visibility uniform", "hi-vis uniform", "reflective uniform", "safety uniform",
+         "high visibility shirt", "reflective stripes", "safety shirt with reflective stripes",
+         "orange safety shirt", "orange high visibility shirt", "orange reflective shirt",
+         "high visibility orange shirt", "safety workwear", "reflective safety clothing",
+         "orange and yellow safety shirt", "orange and green safety shirt", "high visibility orange clothing"]
+  
+  # Avental (incluindo avental de couro)
+  apron: ["apron", "work apron", "leather apron", "safety apron", "protective apron", "industrial apron", 
+          "welding apron", "leather work apron", "heavy duty apron", "workwear apron"]
+
+# Prompts negativos (opcional - para reduzir falsos positivos)
+negative:
+  # Objetos que podem ser confundidos
+  # (YOLO-World não usa negativos diretamente, mas pode ser útil para pós-processamento)
+  #false_positives: ["fire hydrant", "traffic cone", "pole", "post"]
+

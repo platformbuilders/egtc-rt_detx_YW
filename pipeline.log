@@ -1,0 +1,384 @@
+2025-12-03 10:39:30 [pipeline] [INFO] [SUPERVISOR] Supervisor inicializado. Log: pipeline.log
+2025-12-03 10:39:30 [pipeline] [INFO] [SUPERVISOR] Iniciando sistema multiprocessing...
+2025-12-03 10:39:30 [pipeline] [INFO] [STREAM_SERVER] Iniciando servidor MJPEG na porta 5000
+2025-12-03 10:39:30 [pipeline] [INFO] [STREAM_SERVER] Servidor MJPEG iniciado. Endpoints: /stream/<camera_id>, /health, /cameras
+2025-12-03 10:39:31 [pipeline] [INFO] [SUPERVISOR] Iniciando GPU Worker...
+2025-12-03 10:39:31 [pipeline] [INFO] [SUPERVISOR] GPU Worker iniciado (PID: 1691839)
+2025-12-03 10:39:31 [pipeline] [INFO] [GPU_WORKER] Carregando modelos na GPU...
+2025-12-03 10:39:33 [pipeline] [INFO] [SUPERVISOR] Iniciando Camera Worker: CAM061
+2025-12-03 10:39:33 [pipeline] [INFO] [SUPERVISOR] CAM061: ROI: /data/egtc_detr/rois/roi_cam61.json, polígonos: ['roi1_epi1']
+2025-12-03 10:39:33 [pipeline] [INFO] [SUPERVISOR] CAM061: EPIs por ROI: ['roi1_epi1']
+2025-12-03 10:39:33 [pipeline] [INFO] [SUPERVISOR] CAM061: Camera Worker iniciado (PID: 1691892)
+2025-12-03 10:39:33 [pipeline] [INFO] [GPU_WORKER] RT-DETR-X carregado com sucesso
+2025-12-03 10:39:33 [pipeline] [INFO] [SUPERVISOR] Iniciando Camera Worker: CAM062
+2025-12-03 10:39:33 [pipeline] [INFO] [SUPERVISOR] CAM062: ROI: /data/egtc_detr/rois/roi_cam62.json, polígonos: ['roi1_epi12', 'roi2_epi1']
+2025-12-03 10:39:33 [pipeline] [INFO] [SUPERVISOR] CAM062: EPIs por ROI: ['roi1_epi12', 'roi2_epi1']
+2025-12-03 10:39:33 [pipeline] [INFO] [SUPERVISOR] CAM062: Camera Worker iniciado (PID: 1691895)
+2025-12-03 10:39:34 [pipeline] [INFO] [SUPERVISOR] Iniciando Camera Worker: CAM063
+2025-12-03 10:39:34 [pipeline] [INFO] [SUPERVISOR] CAM063: ROI: /data/egtc_detr/rois/roi_cam63.json, polígonos: ['roi1_epi12']
+2025-12-03 10:39:34 [pipeline] [INFO] [SUPERVISOR] CAM063: EPIs por ROI: ['roi1_epi12']
+2025-12-03 10:39:34 [pipeline] [INFO] [SUPERVISOR] CAM063: Camera Worker iniciado (PID: 1691900)
+2025-12-03 10:39:34 [pipeline] [INFO] [SUPERVISOR] Iniciando Camera Worker: CAM064
+2025-12-03 10:39:34 [pipeline] [INFO] [SUPERVISOR] CAM064: ROI: /data/egtc_detr/rois/roi_cam64.json, polígonos: ['roi1_epi123', 'roi2_epi1']
+2025-12-03 10:39:34 [pipeline] [INFO] [SUPERVISOR] CAM064: EPIs por ROI: ['roi1_epi123', 'roi2_epi1']
+2025-12-03 10:39:34 [pipeline] [INFO] [SUPERVISOR] CAM064: Camera Worker iniciado (PID: 1691902)
+2025-12-03 10:39:35 [pipeline] [INFO] [SUPERVISOR] Sistema iniciado. Monitorando 4 câmera(s).
+2025-12-03 10:39:35 [pipeline] [INFO] [SUPERVISOR] Streaming MJPEG disponível em http://0.0.0.0:5000/stream/<camera_id>
+2025-12-03 10:39:36 [pipeline] [INFO] [GPU_WORKER] PPE Detector (OWL-V2) carregado com sucesso
+2025-12-03 10:39:36 [pipeline] [INFO] [GPU_WORKER] Modelos carregados com sucesso
+2025-12-03 10:39:36 [pipeline] [INFO] [GPU_WORKER] GPU Worker iniciado. Aguardando requisições...
+2025-12-03 10:39:38 [pipeline] [INFO] [CAM061] Camera Worker iniciado
+2025-12-03 10:39:38 [pipeline] [INFO] [CAM061] Usando pickle para serialização (shared memory desabilitado por padrão)
+2025-12-03 10:39:39 [pipeline] [INFO] [CAM062] Camera Worker iniciado
+2025-12-03 10:39:39 [pipeline] [INFO] [CAM062] Usando pickle para serialização (shared memory desabilitado por padrão)
+2025-12-03 10:39:39 [pipeline] [INFO] [CAM061] AlertManager inicializado com resolução 1920x1080
+2025-12-03 10:39:39 [pipeline] [INFO] [CAM061] Buffer de streaming atualizado (frame 1, 5.93 MB via pickle)
+2025-12-03 10:39:40 [pipeline] [INFO] [CAM062] AlertManager inicializado com resolução 1920x1080
+2025-12-03 10:39:40 [pipeline] [INFO] [CAM064] Camera Worker iniciado
+2025-12-03 10:39:40 [pipeline] [INFO] [CAM064] Usando pickle para serialização (shared memory desabilitado por padrão)
+2025-12-03 10:39:40 [pipeline] [INFO] [CAM062] Buffer de streaming atualizado (frame 1, 5.93 MB via pickle)
+2025-12-03 10:39:41 [pipeline] [INFO] [CAM064] AlertManager inicializado com resolução 1920x1080
+2025-12-03 10:39:41 [pipeline] [INFO] [CAM064] Buffer de streaming atualizado (frame 1, 5.93 MB via pickle)
+2025-12-03 10:39:45 [pipeline] [INFO] [CAM063] Camera Worker iniciado
+2025-12-03 10:39:45 [pipeline] [INFO] [CAM063] Usando pickle para serialização (shared memory desabilitado por padrão)
+2025-12-03 10:39:48 [pipeline] [INFO] [CAM063] AlertManager inicializado com resolução 1920x1080
+2025-12-03 10:39:59 [pipeline] [INFO] [STREAM_SERVER] Cliente conectado ao stream de CAM062
+2025-12-03 10:39:59 [pipeline] [INFO] [STREAM_SERVER] Generator iniciado para CAM062
+2025-12-03 10:40:00 [pipeline] [INFO] [STREAM_SERVER] Enviando primeiro frame para CAM062
+2025-12-03 10:45:44 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 10:45:44 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 10:45:44 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 10:45:44 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 10:45:44 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 10:45:44 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 10:45:44 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 10:45:44 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 10:45:44 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 10:45:44 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 10:45:44 [pipeline] [INFO] [SUPERVISOR] Iniciando shutdown graceful...
+2025-12-03 10:45:44 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 10:45:46 [pipeline] [INFO] [STREAM_SERVER] Servidor MJPEG parado
+2025-12-03 10:45:46 [pipeline] [INFO] [SUPERVISOR] Terminando CAM061...
+2025-12-03 10:45:46 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 15. Iniciando shutdown graceful...
+2025-12-03 10:45:49 [pipeline] [INFO] [GPU_WORKER] Recebido comando de shutdown
+2025-12-03 10:45:49 [pipeline] [INFO] [GPU_WORKER] GPU Worker finalizado
+2025-12-03 10:45:51 [pipeline] [WARNING] [SUPERVISOR] CAM061: Forçando kill...
+2025-12-03 10:45:51 [pipeline] [INFO] [SUPERVISOR] Terminando CAM062...
+2025-12-03 10:45:51 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 15. Iniciando shutdown graceful...
+2025-12-03 10:45:56 [pipeline] [WARNING] [SUPERVISOR] CAM062: Forçando kill...
+2025-12-03 10:45:56 [pipeline] [INFO] [SUPERVISOR] Terminando CAM063...
+2025-12-03 10:45:56 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 15. Iniciando shutdown graceful...
+2025-12-03 10:46:01 [pipeline] [WARNING] [SUPERVISOR] CAM063: Forçando kill...
+2025-12-03 10:46:01 [pipeline] [INFO] [SUPERVISOR] Terminando CAM064...
+2025-12-03 10:46:01 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 15. Iniciando shutdown graceful...
+2025-12-03 10:46:06 [pipeline] [WARNING] [SUPERVISOR] CAM064: Forçando kill...
+2025-12-03 10:46:06 [pipeline] [INFO] [SUPERVISOR] Terminando GPU Worker...
+2025-12-03 10:46:06 [pipeline] [INFO] [SUPERVISOR] Shutdown completo
+2025-12-03 14:31:49 [pipeline] [INFO] [SUPERVISOR] Supervisor inicializado. Log: pipeline.log
+2025-12-03 14:31:49 [pipeline] [INFO] [SUPERVISOR] Iniciando sistema multiprocessing...
+2025-12-03 14:31:49 [pipeline] [INFO] [STREAM_SERVER] Iniciando servidor MJPEG na porta 5000
+2025-12-03 14:31:49 [pipeline] [INFO] [STREAM_SERVER] Servidor MJPEG iniciado. Endpoints: /stream/<camera_id>, /health, /cameras
+2025-12-03 14:31:50 [pipeline] [INFO] [STREAM_SERVER] Cliente conectado ao stream de CAM062
+2025-12-03 14:31:50 [pipeline] [INFO] [STREAM_SERVER] Generator iniciado para CAM062
+2025-12-03 14:31:50 [pipeline] [INFO] [STREAM_SERVER] Enviando primeiro frame para CAM062
+2025-12-03 14:31:50 [pipeline] [WARNING] [STREAM_SERVER] Câmera CAM062 não encontrada no buffer. Câmeras disponíveis: []. Aguardando frames...
+2025-12-03 14:31:50 [pipeline] [INFO] [SUPERVISOR] Iniciando GPU Worker...
+2025-12-03 14:31:50 [pipeline] [INFO] [SUPERVISOR] GPU Worker iniciado (PID: 1825281)
+2025-12-03 14:31:50 [pipeline] [INFO] [GPU_WORKER] Carregando modelos na GPU...
+2025-12-03 14:31:52 [pipeline] [INFO] [SUPERVISOR] Iniciando Camera Worker: CAM061
+2025-12-03 14:31:52 [pipeline] [INFO] [SUPERVISOR] CAM061: ROI: /data/egtc_detr/rois/roi_cam61.json, polígonos: ['roi1_epi1']
+2025-12-03 14:31:52 [pipeline] [INFO] [SUPERVISOR] CAM061: EPIs por ROI: ['roi1_epi1']
+2025-12-03 14:31:52 [pipeline] [INFO] [SUPERVISOR] CAM061: Camera Worker iniciado (PID: 1825293)
+2025-12-03 14:31:53 [pipeline] [INFO] [GPU_WORKER] RT-DETR-X carregado com sucesso
+2025-12-03 14:31:53 [pipeline] [INFO] [SUPERVISOR] Iniciando Camera Worker: CAM062
+2025-12-03 14:31:53 [pipeline] [INFO] [SUPERVISOR] CAM062: ROI: /data/egtc_detr/rois/roi_cam62.json, polígonos: ['roi1_epi12', 'roi2_epi1']
+2025-12-03 14:31:53 [pipeline] [INFO] [SUPERVISOR] CAM062: EPIs por ROI: ['roi1_epi12', 'roi2_epi1']
+2025-12-03 14:31:53 [pipeline] [INFO] [SUPERVISOR] CAM062: Camera Worker iniciado (PID: 1825299)
+2025-12-03 14:31:54 [pipeline] [INFO] [SUPERVISOR] Iniciando Camera Worker: CAM063
+2025-12-03 14:31:54 [pipeline] [INFO] [SUPERVISOR] CAM063: ROI: /data/egtc_detr/rois/roi_cam63.json, polígonos: ['roi1_epi12']
+2025-12-03 14:31:54 [pipeline] [INFO] [SUPERVISOR] CAM063: EPIs por ROI: ['roi1_epi12']
+2025-12-03 14:31:54 [pipeline] [INFO] [SUPERVISOR] CAM063: Camera Worker iniciado (PID: 1825342)
+2025-12-03 14:31:54 [pipeline] [INFO] [SUPERVISOR] Iniciando Camera Worker: CAM064
+2025-12-03 14:31:54 [pipeline] [INFO] [SUPERVISOR] CAM064: ROI: /data/egtc_detr/rois/roi_cam64.json, polígonos: ['roi1_epi123', 'roi2_epi1']
+2025-12-03 14:31:54 [pipeline] [INFO] [SUPERVISOR] CAM064: EPIs por ROI: ['roi1_epi123', 'roi2_epi1']
+2025-12-03 14:31:54 [pipeline] [INFO] [SUPERVISOR] CAM064: Camera Worker iniciado (PID: 1825369)
+2025-12-03 14:31:55 [pipeline] [INFO] [SUPERVISOR] Sistema iniciado. Monitorando 4 câmera(s).
+2025-12-03 14:31:55 [pipeline] [INFO] [SUPERVISOR] Streaming MJPEG disponível em http://0.0.0.0:5000/stream/<camera_id>
+2025-12-03 14:31:56 [pipeline] [INFO] [GPU_WORKER] PPE Detector (OWL-V2) carregado com sucesso
+2025-12-03 14:31:56 [pipeline] [INFO] [GPU_WORKER] Modelos carregados com sucesso
+2025-12-03 14:31:56 [pipeline] [INFO] [GPU_WORKER] GPU Worker iniciado. Aguardando requisições...
+2025-12-03 14:31:58 [pipeline] [INFO] [CAM061] Camera Worker iniciado
+2025-12-03 14:31:58 [pipeline] [INFO] [CAM061] Usando pickle para serialização (shared memory desabilitado por padrão)
+2025-12-03 14:31:59 [pipeline] [INFO] [CAM062] Camera Worker iniciado
+2025-12-03 14:31:59 [pipeline] [INFO] [CAM062] Usando pickle para serialização (shared memory desabilitado por padrão)
+2025-12-03 14:31:59 [pipeline] [WARNING] [STREAM_SERVER] Ainda aguardando CAM062... Câmeras no buffer: []
+2025-12-03 14:31:59 [pipeline] [INFO] [CAM061] Sem scaling necessário: frame 1920x1080 = original 1920x1080
+2025-12-03 14:31:59 [pipeline] [INFO] [CAM061] AlertManager inicializado com resolução 1920x1080
+2025-12-03 14:31:59 [pipeline] [INFO] [CAM061] Buffer de streaming atualizado (frame 1, 5.93 MB via pickle)
+2025-12-03 14:31:59 [pipeline] [INFO] [CAM062] Sem scaling necessário: frame 1920x1080 = original 1920x1080
+2025-12-03 14:31:59 [pipeline] [INFO] [CAM062] AlertManager inicializado com resolução 1920x1080
+2025-12-03 14:32:00 [pipeline] [INFO] [CAM062] Buffer de streaming atualizado (frame 1, 5.93 MB via pickle)
+2025-12-03 14:32:00 [pipeline] [INFO] [CAM064] Camera Worker iniciado
+2025-12-03 14:32:00 [pipeline] [INFO] [CAM064] Usando pickle para serialização (shared memory desabilitado por padrão)
+2025-12-03 14:32:01 [pipeline] [INFO] [CAM064] AlertManager inicializado com resolução 1920x1080
+2025-12-03 14:32:03 [pipeline] [INFO] [CAM063] Camera Worker iniciado
+2025-12-03 14:32:03 [pipeline] [INFO] [CAM063] Usando pickle para serialização (shared memory desabilitado por padrão)
+2025-12-03 14:32:06 [pipeline] [INFO] [CAM063] AlertManager inicializado com resolução 1920x1080
+2025-12-03 14:32:38 [pipeline] [INFO] [STREAM_SERVER] Cliente conectado ao stream de CAM062
+2025-12-03 14:32:38 [pipeline] [INFO] [STREAM_SERVER] Generator iniciado para CAM062
+2025-12-03 14:32:38 [pipeline] [INFO] [STREAM_SERVER] Enviando primeiro frame para CAM062
+2025-12-03 14:32:50 [pipeline] [INFO] [STREAM_SERVER] Cliente conectado ao stream de CAM063
+2025-12-03 14:32:50 [pipeline] [INFO] [STREAM_SERVER] Generator iniciado para CAM063
+2025-12-03 14:32:50 [pipeline] [INFO] [STREAM_SERVER] Enviando primeiro frame para CAM063
+2025-12-03 14:33:06 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 14:33:06 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 14:33:06 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 14:33:06 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 14:33:06 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 14:33:06 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 14:33:06 [pipeline] [INFO] [SUPERVISOR] Iniciando shutdown graceful...
+2025-12-03 14:33:08 [pipeline] [INFO] [STREAM_SERVER] Servidor MJPEG parado
+2025-12-03 14:33:08 [pipeline] [INFO] [SUPERVISOR] Terminando CAM061...
+2025-12-03 14:33:08 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 15. Iniciando shutdown graceful...
+2025-12-03 14:33:11 [pipeline] [INFO] [GPU_WORKER] Recebido comando de shutdown
+2025-12-03 14:33:11 [pipeline] [INFO] [GPU_WORKER] GPU Worker finalizado
+2025-12-03 14:33:13 [pipeline] [WARNING] [SUPERVISOR] CAM061: Forçando kill...
+2025-12-03 14:33:13 [pipeline] [INFO] [SUPERVISOR] Terminando CAM062...
+2025-12-03 14:33:13 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 15. Iniciando shutdown graceful...
+2025-12-03 14:33:18 [pipeline] [WARNING] [SUPERVISOR] CAM062: Forçando kill...
+2025-12-03 14:33:18 [pipeline] [INFO] [SUPERVISOR] Terminando CAM063...
+2025-12-03 14:33:18 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 15. Iniciando shutdown graceful...
+2025-12-03 14:33:23 [pipeline] [WARNING] [SUPERVISOR] CAM063: Forçando kill...
+2025-12-03 14:33:23 [pipeline] [INFO] [SUPERVISOR] Terminando CAM064...
+2025-12-03 14:33:23 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 15. Iniciando shutdown graceful...
+2025-12-03 14:33:28 [pipeline] [WARNING] [SUPERVISOR] CAM064: Forçando kill...
+2025-12-03 14:33:28 [pipeline] [INFO] [SUPERVISOR] Terminando GPU Worker...
+2025-12-03 14:33:28 [pipeline] [INFO] [SUPERVISOR] Shutdown completo
+2025-12-03 18:35:33 [pipeline] [INFO] [SUPERVISOR] Supervisor inicializado. Log: pipeline.log
+2025-12-03 18:35:33 [pipeline] [INFO] [SUPERVISOR] Iniciando sistema multiprocessing...
+2025-12-03 18:35:33 [pipeline] [INFO] [STREAM_SERVER] Iniciando servidor MJPEG na porta 5000
+2025-12-03 18:35:33 [pipeline] [INFO] [STREAM_SERVER] Servidor MJPEG iniciado. Endpoints: /stream/<camera_id>, /health, /cameras
+2025-12-03 18:35:34 [pipeline] [INFO] [SUPERVISOR] Iniciando GPU Worker...
+2025-12-03 18:35:34 [pipeline] [INFO] [SUPERVISOR] GPU Worker iniciado (PID: 1964492)
+2025-12-03 18:35:34 [pipeline] [INFO] [GPU_WORKER] Carregando modelos na GPU...
+2025-12-03 18:35:36 [pipeline] [INFO] [SUPERVISOR] Iniciando Camera Worker: CAM061
+2025-12-03 18:35:36 [pipeline] [INFO] [SUPERVISOR] CAM061: ROI: /data/egtc_detr/rois/roi_cam61.json, polígonos: ['roi1_epi1']
+2025-12-03 18:35:36 [pipeline] [INFO] [SUPERVISOR] CAM061: EPIs por ROI: ['roi1_epi1']
+2025-12-03 18:35:36 [pipeline] [INFO] [SUPERVISOR] CAM061: Camera Worker iniciado (PID: 1964543)
+2025-12-03 18:35:36 [pipeline] [INFO] [SUPERVISOR] Iniciando Camera Worker: CAM062
+2025-12-03 18:35:36 [pipeline] [INFO] [SUPERVISOR] CAM062: ROI: /data/egtc_detr/rois/roi_cam62.json, polígonos: ['roi1_epi12', 'roi2_epi1']
+2025-12-03 18:35:36 [pipeline] [INFO] [SUPERVISOR] CAM062: EPIs por ROI: ['roi1_epi12', 'roi2_epi1']
+2025-12-03 18:35:36 [pipeline] [INFO] [SUPERVISOR] CAM062: Camera Worker iniciado (PID: 1964548)
+2025-12-03 18:35:36 [pipeline] [INFO] [STREAM_SERVER] Cliente conectado ao stream de CAM063
+2025-12-03 18:35:36 [pipeline] [INFO] [STREAM_SERVER] Generator iniciado para CAM063
+2025-12-03 18:35:36 [pipeline] [INFO] [STREAM_SERVER] Enviando primeiro frame para CAM063
+2025-12-03 18:35:36 [pipeline] [WARNING] [STREAM_SERVER] Câmera CAM063 não encontrada no buffer. Câmeras disponíveis: []. Aguardando frames...
+2025-12-03 18:35:36 [pipeline] [INFO] [GPU_WORKER] RT-DETR-X carregado com sucesso
+2025-12-03 18:35:37 [pipeline] [INFO] [SUPERVISOR] Iniciando Camera Worker: CAM063
+2025-12-03 18:35:37 [pipeline] [INFO] [SUPERVISOR] CAM063: ROI: /data/egtc_detr/rois/roi_cam63.json, polígonos: ['roi1_epi12']
+2025-12-03 18:35:37 [pipeline] [INFO] [SUPERVISOR] CAM063: EPIs por ROI: ['roi1_epi12']
+2025-12-03 18:35:37 [pipeline] [INFO] [SUPERVISOR] CAM063: Camera Worker iniciado (PID: 1964553)
+2025-12-03 18:35:37 [pipeline] [INFO] [SUPERVISOR] Iniciando Camera Worker: CAM064
+2025-12-03 18:35:37 [pipeline] [INFO] [SUPERVISOR] CAM064: ROI: /data/egtc_detr/rois/roi_cam64.json, polígonos: ['roi1_epi123', 'roi2_epi1']
+2025-12-03 18:35:37 [pipeline] [INFO] [SUPERVISOR] CAM064: EPIs por ROI: ['roi1_epi123', 'roi2_epi1']
+2025-12-03 18:35:37 [pipeline] [INFO] [SUPERVISOR] CAM064: Camera Worker iniciado (PID: 1964558)
+2025-12-03 18:35:38 [pipeline] [INFO] [SUPERVISOR] Sistema iniciado. Monitorando 4 câmera(s).
+2025-12-03 18:35:38 [pipeline] [INFO] [SUPERVISOR] Streaming MJPEG disponível em http://0.0.0.0:5000/stream/<camera_id>
+2025-12-03 18:35:40 [pipeline] [INFO] [GPU_WORKER] PPE Detector (OWL-V2) carregado com sucesso
+2025-12-03 18:35:40 [pipeline] [INFO] [GPU_WORKER] Modelos carregados com sucesso
+2025-12-03 18:35:40 [pipeline] [INFO] [GPU_WORKER] GPU Worker iniciado. Aguardando requisições...
+2025-12-03 18:35:41 [pipeline] [INFO] [CAM061] Camera Worker iniciado
+2025-12-03 18:35:41 [pipeline] [INFO] [CAM061] Usando pickle para serialização (shared memory desabilitado por padrão)
+2025-12-03 18:35:42 [pipeline] [INFO] [CAM062] Camera Worker iniciado
+2025-12-03 18:35:42 [pipeline] [INFO] [CAM062] Usando pickle para serialização (shared memory desabilitado por padrão)
+2025-12-03 18:35:42 [pipeline] [INFO] [CAM061] Sem scaling necessário: frame 1920x1080 = original 1920x1080
+2025-12-03 18:35:42 [pipeline] [INFO] [CAM061] AlertManager inicializado com resolução 1920x1080
+2025-12-03 18:35:42 [pipeline] [INFO] [CAM061] Buffer de streaming atualizado (frame 1, 5.93 MB via pickle)
+2025-12-03 18:35:43 [pipeline] [INFO] [CAM064] Camera Worker iniciado
+2025-12-03 18:35:43 [pipeline] [INFO] [CAM064] Usando pickle para serialização (shared memory desabilitado por padrão)
+2025-12-03 18:35:43 [pipeline] [INFO] [CAM062] AlertManager inicializado com resolução 1920x1080
+2025-12-03 18:35:44 [pipeline] [INFO] [CAM064] AlertManager inicializado com resolução 1920x1080
+2025-12-03 18:35:45 [pipeline] [WARNING] [STREAM_SERVER] Ainda aguardando CAM063... Câmeras no buffer: ['CAM061', 'CAM062', 'CAM064']
+2025-12-03 18:35:46 [pipeline] [INFO] [CAM063] Camera Worker iniciado
+2025-12-03 18:35:46 [pipeline] [INFO] [CAM063] Usando pickle para serialização (shared memory desabilitado por padrão)
+2025-12-03 18:35:49 [pipeline] [INFO] [CAM063] AlertManager inicializado com resolução 1920x1080
+2025-12-03 18:36:00 [pipeline] [INFO] [STREAM_SERVER] Cliente conectado ao stream de CAM061
+2025-12-03 18:36:00 [pipeline] [INFO] [STREAM_SERVER] Generator iniciado para CAM061
+2025-12-03 18:36:00 [pipeline] [INFO] [STREAM_SERVER] Enviando primeiro frame para CAM061
+2025-12-03 18:36:06 [pipeline] [INFO] [STREAM_SERVER] Cliente conectado ao stream de CAM062
+2025-12-03 18:36:06 [pipeline] [INFO] [STREAM_SERVER] Generator iniciado para CAM062
+2025-12-03 18:36:06 [pipeline] [INFO] [STREAM_SERVER] Enviando primeiro frame para CAM062
+2025-12-03 18:36:11 [pipeline] [INFO] [STREAM_SERVER] Cliente conectado ao stream de CAM064
+2025-12-03 18:36:11 [pipeline] [INFO] [STREAM_SERVER] Generator iniciado para CAM064
+2025-12-03 18:36:11 [pipeline] [INFO] [STREAM_SERVER] Enviando primeiro frame para CAM064
+2025-12-03 18:36:19 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 18:36:19 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 18:36:19 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 18:36:19 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 18:36:19 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 18:36:20 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 18:36:20 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 18:36:20 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 18:36:20 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 18:36:20 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 18:36:20 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 18:36:20 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 18:36:20 [pipeline] [INFO] [SUPERVISOR] Iniciando shutdown graceful...
+2025-12-03 18:36:22 [pipeline] [INFO] [STREAM_SERVER] Servidor MJPEG parado
+2025-12-03 18:36:22 [pipeline] [INFO] [SUPERVISOR] Terminando CAM061...
+2025-12-03 18:36:22 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 15. Iniciando shutdown graceful...
+2025-12-03 18:36:25 [pipeline] [INFO] [GPU_WORKER] Recebido comando de shutdown
+2025-12-03 18:36:25 [pipeline] [INFO] [GPU_WORKER] GPU Worker finalizado
+2025-12-03 18:36:27 [pipeline] [WARNING] [SUPERVISOR] CAM061: Forçando kill...
+2025-12-03 18:36:27 [pipeline] [INFO] [SUPERVISOR] Terminando CAM062...
+2025-12-03 18:36:27 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 15. Iniciando shutdown graceful...
+2025-12-03 18:36:32 [pipeline] [WARNING] [SUPERVISOR] CAM062: Forçando kill...
+2025-12-03 18:36:32 [pipeline] [INFO] [SUPERVISOR] Terminando CAM063...
+2025-12-03 18:36:32 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 15. Iniciando shutdown graceful...
+2025-12-03 18:36:37 [pipeline] [WARNING] [SUPERVISOR] CAM063: Forçando kill...
+2025-12-03 18:36:37 [pipeline] [INFO] [SUPERVISOR] Terminando CAM064...
+2025-12-03 18:36:37 [pipeline] [INFO] [SUPERVISOR] Recebido sinal 15. Iniciando shutdown graceful...
+2025-12-03 18:36:42 [pipeline] [WARNING] [SUPERVISOR] CAM064: Forçando kill...
+2025-12-03 18:36:42 [pipeline] [INFO] [SUPERVISOR] Terminando GPU Worker...
+2025-12-03 18:36:42 [pipeline] [INFO] [SUPERVISOR] Shutdown completo
+2025-12-03 19:23:41 [pipeline] [INFO] [MAIN] Carregando modelos...
+2025-12-03 19:23:43 [pipeline] [INFO] [MAIN] RT-DETR-X carregado com sucesso
+2025-12-03 19:23:46 [pipeline] [INFO] [MAIN] Detector de EPIs (OWL-V2) carregado com sucesso
+2025-12-03 19:23:46 [pipeline] [INFO] [MAIN] Iniciando 1 thread(s) de câmera(s)...
+2025-12-03 19:23:46 [pipeline] [ERROR] [MAIN] Erro ao iniciar thread de câmera CAM063: Arquivo ROI não encontrado: /data/egtc_detr/config/rois/roi_cam63.json
+2025-12-03 19:23:46 [pipeline] [ERROR] [MAIN] Traceback: Traceback (most recent call last):
+  File "/data/egtc_detr/main.py", line 188, in start_camera_threads
+    thread = CameraThread(
+  File "/data/egtc_detr/camera_thread.py", line 112, in __init__
+    self.roi = ROI(roi_path, use_polygons=roi_polys, debug=self.debug) if roi_path else ROI(None, debug=self.debug)
+  File "/data/egtc_detr/pipeline_RETDETRX_YW.py", line 354, in __init__
+    raise FileNotFoundError(f"Arquivo ROI não encontrado: {json_path}")
+FileNotFoundError: Arquivo ROI não encontrado: /data/egtc_detr/config/rois/roi_cam63.json
+Traceback (most recent call last):
+  File "/data/egtc_detr/main.py", line 188, in start_camera_threads
+    thread = CameraThread(
+  File "/data/egtc_detr/camera_thread.py", line 112, in __init__
+    self.roi = ROI(roi_path, use_polygons=roi_polys, debug=self.debug) if roi_path else ROI(None, debug=self.debug)
+  File "/data/egtc_detr/pipeline_RETDETRX_YW.py", line 354, in __init__
+    raise FileNotFoundError(f"Arquivo ROI não encontrado: {json_path}")
+FileNotFoundError: Arquivo ROI não encontrado: /data/egtc_detr/config/rois/roi_cam63.json
+2025-12-03 19:23:46 [pipeline] [ERROR] [MAIN] Nenhuma thread de câmera iniciada. Encerrando.
+2025-12-03 19:23:46 [pipeline] [INFO] [MAIN] Parando pipeline...
+2025-12-03 19:23:46 [pipeline] [INFO] [MAIN] Pipeline finalizado
+2025-12-03 19:24:32 [pipeline] [INFO] [MAIN] Carregando modelos...
+2025-12-03 19:24:34 [pipeline] [INFO] [MAIN] RT-DETR-X carregado com sucesso
+2025-12-03 19:24:37 [pipeline] [INFO] [MAIN] Detector de EPIs (OWL-V2) carregado com sucesso
+2025-12-03 19:24:37 [pipeline] [INFO] [MAIN] Iniciando 4 thread(s) de câmera(s)...
+2025-12-03 19:24:37 [pipeline] [ERROR] [MAIN] Erro ao iniciar thread de câmera CAM061: Arquivo ROI não encontrado: /data/egtc_detr/config/rois/roi_cam61.json
+2025-12-03 19:24:37 [pipeline] [ERROR] [MAIN] Traceback: Traceback (most recent call last):
+  File "/data/egtc_detr/main.py", line 188, in start_camera_threads
+    thread = CameraThread(
+  File "/data/egtc_detr/camera_thread.py", line 112, in __init__
+    self.roi = ROI(roi_path, use_polygons=roi_polys, debug=self.debug) if roi_path else ROI(None, debug=self.debug)
+  File "/data/egtc_detr/pipeline_RETDETRX_YW.py", line 354, in __init__
+    raise FileNotFoundError(f"Arquivo ROI não encontrado: {json_path}")
+FileNotFoundError: Arquivo ROI não encontrado: /data/egtc_detr/config/rois/roi_cam61.json
+Traceback (most recent call last):
+  File "/data/egtc_detr/main.py", line 188, in start_camera_threads
+    thread = CameraThread(
+  File "/data/egtc_detr/camera_thread.py", line 112, in __init__
+    self.roi = ROI(roi_path, use_polygons=roi_polys, debug=self.debug) if roi_path else ROI(None, debug=self.debug)
+  File "/data/egtc_detr/pipeline_RETDETRX_YW.py", line 354, in __init__
+    raise FileNotFoundError(f"Arquivo ROI não encontrado: {json_path}")
+FileNotFoundError: Arquivo ROI não encontrado: /data/egtc_detr/config/rois/roi_cam61.json
+2025-12-03 19:24:37 [pipeline] [ERROR] [MAIN] Erro ao iniciar thread de câmera CAM062: Arquivo ROI não encontrado: /data/egtc_detr/config/rois/roi_cam62.json
+2025-12-03 19:24:37 [pipeline] [ERROR] [MAIN] Traceback: Traceback (most recent call last):
+  File "/data/egtc_detr/main.py", line 188, in start_camera_threads
+    thread = CameraThread(
+  File "/data/egtc_detr/camera_thread.py", line 112, in __init__
+    self.roi = ROI(roi_path, use_polygons=roi_polys, debug=self.debug) if roi_path else ROI(None, debug=self.debug)
+  File "/data/egtc_detr/pipeline_RETDETRX_YW.py", line 354, in __init__
+    raise FileNotFoundError(f"Arquivo ROI não encontrado: {json_path}")
+FileNotFoundError: Arquivo ROI não encontrado: /data/egtc_detr/config/rois/roi_cam62.json
+Traceback (most recent call last):
+  File "/data/egtc_detr/main.py", line 188, in start_camera_threads
+    thread = CameraThread(
+  File "/data/egtc_detr/camera_thread.py", line 112, in __init__
+    self.roi = ROI(roi_path, use_polygons=roi_polys, debug=self.debug) if roi_path else ROI(None, debug=self.debug)
+  File "/data/egtc_detr/pipeline_RETDETRX_YW.py", line 354, in __init__
+    raise FileNotFoundError(f"Arquivo ROI não encontrado: {json_path}")
+FileNotFoundError: Arquivo ROI não encontrado: /data/egtc_detr/config/rois/roi_cam62.json
+2025-12-03 19:24:37 [pipeline] [ERROR] [MAIN] Erro ao iniciar thread de câmera CAM063: Arquivo ROI não encontrado: /data/egtc_detr/config/rois/roi_cam63.json
+2025-12-03 19:24:37 [pipeline] [ERROR] [MAIN] Traceback: Traceback (most recent call last):
+  File "/data/egtc_detr/main.py", line 188, in start_camera_threads
+    thread = CameraThread(
+  File "/data/egtc_detr/camera_thread.py", line 112, in __init__
+    self.roi = ROI(roi_path, use_polygons=roi_polys, debug=self.debug) if roi_path else ROI(None, debug=self.debug)
+  File "/data/egtc_detr/pipeline_RETDETRX_YW.py", line 354, in __init__
+    raise FileNotFoundError(f"Arquivo ROI não encontrado: {json_path}")
+FileNotFoundError: Arquivo ROI não encontrado: /data/egtc_detr/config/rois/roi_cam63.json
+Traceback (most recent call last):
+  File "/data/egtc_detr/main.py", line 188, in start_camera_threads
+    thread = CameraThread(
+  File "/data/egtc_detr/camera_thread.py", line 112, in __init__
+    self.roi = ROI(roi_path, use_polygons=roi_polys, debug=self.debug) if roi_path else ROI(None, debug=self.debug)
+  File "/data/egtc_detr/pipeline_RETDETRX_YW.py", line 354, in __init__
+    raise FileNotFoundError(f"Arquivo ROI não encontrado: {json_path}")
+FileNotFoundError: Arquivo ROI não encontrado: /data/egtc_detr/config/rois/roi_cam63.json
+2025-12-03 19:24:37 [pipeline] [ERROR] [MAIN] Erro ao iniciar thread de câmera CAM064: Arquivo ROI não encontrado: /data/egtc_detr/config/rois/roi_cam64.json
+2025-12-03 19:24:37 [pipeline] [ERROR] [MAIN] Traceback: Traceback (most recent call last):
+  File "/data/egtc_detr/main.py", line 188, in start_camera_threads
+    thread = CameraThread(
+  File "/data/egtc_detr/camera_thread.py", line 112, in __init__
+    self.roi = ROI(roi_path, use_polygons=roi_polys, debug=self.debug) if roi_path else ROI(None, debug=self.debug)
+  File "/data/egtc_detr/pipeline_RETDETRX_YW.py", line 354, in __init__
+    raise FileNotFoundError(f"Arquivo ROI não encontrado: {json_path}")
+FileNotFoundError: Arquivo ROI não encontrado: /data/egtc_detr/config/rois/roi_cam64.json
+Traceback (most recent call last):
+  File "/data/egtc_detr/main.py", line 188, in start_camera_threads
+    thread = CameraThread(
+  File "/data/egtc_detr/camera_thread.py", line 112, in __init__
+    self.roi = ROI(roi_path, use_polygons=roi_polys, debug=self.debug) if roi_path else ROI(None, debug=self.debug)
+  File "/data/egtc_detr/pipeline_RETDETRX_YW.py", line 354, in __init__
+    raise FileNotFoundError(f"Arquivo ROI não encontrado: {json_path}")
+FileNotFoundError: Arquivo ROI não encontrado: /data/egtc_detr/config/rois/roi_cam64.json
+2025-12-03 19:24:37 [pipeline] [ERROR] [MAIN] Nenhuma thread de câmera iniciada. Encerrando.
+2025-12-03 19:24:37 [pipeline] [INFO] [MAIN] Parando pipeline...
+2025-12-03 19:24:37 [pipeline] [INFO] [MAIN] Pipeline finalizado
+2025-12-03 19:45:23 [pipeline] [INFO] [MAIN] Carregando modelos...
+2025-12-03 19:45:25 [pipeline] [INFO] [MAIN] RT-DETR-X carregado com sucesso
+2025-12-03 19:45:29 [pipeline] [INFO] [MAIN] Detector de EPIs (OWL-V2) carregado com sucesso
+2025-12-03 19:45:29 [pipeline] [INFO] [MAIN] Iniciando 4 thread(s) de câmera(s)...
+2025-12-03 19:45:34 [pipeline] [INFO] [CAM061] Thread inicializada - ROI: rois/roi_cam61.json, EPIs por ROI: ['roi1_epi1']
+2025-12-03 19:45:34 [pipeline] [INFO] [CAM061] Thread iniciada
+2025-12-03 19:45:34 [pipeline] [INFO] [MAIN] Thread de câmera CAM061 iniciada (PID: 137967586760256)
+2025-12-03 19:45:34 [pipeline] [INFO] [CAM061] Thread finalizada
+2025-12-03 19:45:39 [pipeline] [INFO] [CAM062] Thread inicializada - ROI: rois/roi_cam62.json, EPIs por ROI: ['roi1_epi12', 'roi2_epi1']
+2025-12-03 19:45:39 [pipeline] [INFO] [CAM062] Thread iniciada
+2025-12-03 19:45:39 [pipeline] [INFO] [MAIN] Thread de câmera CAM062 iniciada (PID: 137968895383104)
+2025-12-03 19:45:39 [pipeline] [INFO] [CAM062] Thread finalizada
+2025-12-03 19:45:49 [pipeline] [INFO] [CAM063] Thread inicializada - ROI: rois/roi_cam63.json, EPIs por ROI: ['roi1_epi12']
+2025-12-03 19:45:49 [pipeline] [INFO] [CAM063] Thread iniciada
+2025-12-03 19:45:49 [pipeline] [INFO] [MAIN] Thread de câmera CAM063 iniciada (PID: 137967586760256)
+2025-12-03 19:45:49 [pipeline] [INFO] [CAM063] Thread finalizada
+2025-12-03 19:45:54 [pipeline] [INFO] [CAM064] Thread inicializada - ROI: rois/roi_cam64.json, EPIs por ROI: ['roi1_epi123', 'roi2_epi1']
+2025-12-03 19:45:54 [pipeline] [INFO] [CAM064] Thread iniciada
+2025-12-03 19:45:54 [pipeline] [INFO] [MAIN] Thread de câmera CAM064 iniciada (PID: 137968895383104)
+2025-12-03 19:45:54 [pipeline] [INFO] [MAIN] Servidor de streaming iniciado na porta 5000
+2025-12-03 19:45:54 [pipeline] [INFO] [MAIN] Pipeline iniciado. Aguardando threads...
+2025-12-03 19:45:54 [pipeline] [INFO] [STREAM_SERVER] Iniciando servidor MJPEG na porta 5000
+2025-12-03 19:45:54 [pipeline] [INFO] [STREAM_SERVER] Servidor MJPEG iniciado. Endpoints: /stream/<camera_id>, /health, /cameras
+2025-12-03 19:45:54 [pipeline] [INFO] [MAIN] Câmeras ativas: ['CAM061', 'CAM062', 'CAM063', 'CAM064']
+2025-12-03 19:45:54 [pipeline] [WARNING] [MAIN] Thread de câmera CAM061 morreu. Não será reiniciada automaticamente.
+2025-12-03 19:45:54 [pipeline] [WARNING] [MAIN] Thread de câmera CAM062 morreu. Não será reiniciada automaticamente.
+2025-12-03 19:45:54 [pipeline] [WARNING] [MAIN] Thread de câmera CAM063 morreu. Não será reiniciada automaticamente.
+2025-12-03 19:45:54 [pipeline] [INFO] [CAM064] Thread finalizada
+2025-12-03 19:45:59 [pipeline] [INFO] [MAIN] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 19:45:59 [pipeline] [INFO] [MAIN] Parando pipeline...
+2025-12-03 19:45:59 [pipeline] [INFO] [MAIN] Aguardando thread de câmera CAM064 terminar...
+2025-12-03 19:45:59 [pipeline] [INFO] [MAIN] Recebido sinal 2. Iniciando shutdown graceful...
+2025-12-03 19:45:59 [pipeline] [INFO] [MAIN] Parando pipeline...
+2025-12-03 19:45:59 [pipeline] [INFO] [MAIN] Aguardando thread de câmera CAM064 terminar...
+2025-12-03 19:46:01 [pipeline] [INFO] [STREAM_SERVER] Servidor MJPEG parado
+2025-12-03 19:46:01 [pipeline] [INFO] [MAIN] Pipeline finalizado
+2025-12-03 19:46:01 [pipeline] [INFO] [STREAM_SERVER] Servidor MJPEG parado
+2025-12-03 19:46:01 [pipeline] [INFO] [MAIN] Pipeline finalizado
+2025-12-03 19:46:01 [pipeline] [INFO] [MAIN] Parando pipeline...
+2025-12-03 19:46:01 [pipeline] [INFO] [MAIN] Aguardando thread de câmera CAM064 terminar...
+2025-12-03 19:46:03 [pipeline] [INFO] [STREAM_SERVER] Servidor MJPEG parado
+2025-12-03 19:46:03 [pipeline] [INFO] [MAIN] Pipeline finalizado

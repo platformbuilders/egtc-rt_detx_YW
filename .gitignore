@@ -1,0 +1,25 @@
+# Modelos e pesos de IA
+#*.pt
+#*.pth
+#*.onnx
+#*.bin
+
+# Vídeos e saídas grandes
+*.mp4
+*.avi
+out/
+
+# Cache de modelos Hugging Face
+.hf/
+
+# Virtual env
+egtc_detr_venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Outros
+.env
+.DS_Store

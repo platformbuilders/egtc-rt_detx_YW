@@ -1,0 +1,67 @@
+# Dependências OPCIONAIS do sistema (apt-get)
+# 
+# Estes pacotes são necessários APENAS se você precisar compilar bibliotecas Python
+# a partir do código-fonte. Se você instala via pip com wheels pré-compilados (padrão),
+# NÃO são necessários.
+#
+# Para instalar todas as dependências opcionais:
+#   sudo apt update && sudo apt install -y $(grep -v '^#' apt_requirements_optional.txt | tr '\n' ' ')
+
+# Compiladores e ferramentas de build
+build-essential
+gcc
+g++
+make
+cmake
+
+# Bibliotecas de desenvolvimento para OpenCV
+libopencv-dev
+libopencv-contrib-dev
+
+# Bibliotecas de desenvolvimento para FFmpeg
+libavcodec-dev
+libavformat-dev
+libavutil-dev
+libswscale-dev
+libswresample-dev
+libavfilter-dev
+libavdevice-dev
+
+# Bibliotecas de imagem
+libjpeg-dev
+libpng-dev
+libtiff-dev
+libwebp-dev
+libopenexr-dev
+
+# GStreamer
+libgstreamer1.0-dev
+libgstreamer-plugins-base1.0-dev
+
+# Bibliotecas matemáticas
+libatlas-base-dev
+liblapack-dev
+libblas-dev
+
+# Bibliotecas para banco de dados
+libmysqlclient-dev
+
+# Bibliotecas de sistema
+libssl-dev
+libffi-dev
+libxml2-dev
+libxslt1-dev
+zlib1g-dev
+libbz2-dev
+libreadline-dev
+libsqlite3-dev
+libncurses5-dev
+libncursesw5-dev
+tk-dev
+liblzma-dev
+
+# Ferramentas opcionais
+vim
+htop
+pkg-config
+

@@ -1,0 +1,11 @@
+# Configuração para teste simples do RT-DETR-X
+camera_url: "rtsp://admin:nsa_sintese2025@10.163.8.63:554/Streaming/Channels/101/"
+
+# Modelo RT-DETR
+model: "rtdetr-x.pt"  # rtdetr-x.pt, rtdetr-l.pt, rtdetr-m.pt
+
+# Parâmetros de detecção
+conf: 0.49           # Threshold de confiança
+imgsz: 720           # Tamanho de processamento (640, 1280, etc)
+device: "cuda"       # cuda ou cpu
+

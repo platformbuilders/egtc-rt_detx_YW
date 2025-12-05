@@ -1,0 +1,95 @@
+# Dependências do sistema (apt-get) necessárias para o projeto
+# 
+# Para instalar todas as dependências:
+#   sudo apt update && sudo apt install -y $(grep -v '^#' apt_requirements.txt | tr '\n' ' ')
+#
+# Para instalar apenas as essenciais:
+#   sudo apt update && sudo apt install -y $(grep -v '^#' apt_requirements.txt | grep -v '^#OPCIONAL' | tr '\n' ' ')
+#
+# Ou instale manualmente cada pacote listado abaixo
+
+# ============================================================================
+# ESSENCIAIS - Necessários para o funcionamento básico
+# ============================================================================
+
+# Python e ferramentas básicas
+python3
+python3-pip
+python3-venv
+python3-dev
+
+# Redis (obrigatório para sistema de alertas)
+redis-server
+redis-tools
+
+# Ferramentas úteis
+curl
+wget
+git
+
+# ============================================================================
+# OPCIONAIS - Necessários apenas para compilar bibliotecas Python do código-fonte
+# Se você instala via pip com wheels pré-compilados (padrão), NÃO são necessários
+# ============================================================================
+
+# Compiladores e ferramentas de build (necessários apenas para compilar do código-fonte)
+#OPCIONAL build-essential
+#OPCIONAL gcc
+#OPCIONAL g++
+#OPCIONAL make
+#OPCIONAL cmake
+
+# Bibliotecas de desenvolvimento para OpenCV (necessárias apenas se compilar opencv-python do código-fonte)
+# Se você usa `pip install opencv-python`, já vem pré-compilado e não precisa desses
+#OPCIONAL libopencv-dev
+#OPCIONAL libopencv-contrib-dev
+
+# Bibliotecas de desenvolvimento para FFmpeg (necessárias apenas se compilar bibliotecas de vídeo do código-fonte)
+#OPCIONAL libavcodec-dev
+#OPCIONAL libavformat-dev
+#OPCIONAL libavutil-dev
+#OPCIONAL libswscale-dev
+#OPCIONAL libswresample-dev
+#OPCIONAL libavfilter-dev
+#OPCIONAL libavdevice-dev
+
+# Bibliotecas de imagem (necessárias apenas para compilar Pillow/outras do código-fonte)
+# Se você usa `pip install pillow`, já vem pré-compilado
+#OPCIONAL libjpeg-dev
+#OPCIONAL libpng-dev
+#OPCIONAL libtiff-dev
+#OPCIONAL libwebp-dev
+#OPCIONAL libopenexr-dev
+
+# GStreamer (necessário apenas se usar funcionalidades específicas do GStreamer)
+#OPCIONAL libgstreamer1.0-dev
+#OPCIONAL libgstreamer-plugins-base1.0-dev
+
+# Bibliotecas matemáticas (necessárias apenas para compilar NumPy/SciPy do código-fonte)
+# Se você usa `pip install numpy scipy`, já vem pré-compilado
+#OPCIONAL libatlas-base-dev
+#OPCIONAL liblapack-dev
+#OPCIONAL libblas-dev
+
+# Bibliotecas para banco de dados (necessárias apenas para compilar drivers do código-fonte)
+# Se você usa `pip install pymysql psycopg2-binary`, já vem pré-compilado
+#OPCIONAL libmysqlclient-dev
+
+# Bibliotecas de sistema (necessárias apenas para compilar algumas bibliotecas Python do código-fonte)
+#OPCIONAL libssl-dev
+#OPCIONAL libffi-dev
+#OPCIONAL libxml2-dev
+#OPCIONAL libxslt1-dev
+#OPCIONAL zlib1g-dev
+#OPCIONAL libbz2-dev
+#OPCIONAL libreadline-dev
+#OPCIONAL libsqlite3-dev
+#OPCIONAL libncurses5-dev
+#OPCIONAL libncursesw5-dev
+#OPCIONAL tk-dev
+#OPCIONAL liblzma-dev
+
+# Ferramentas opcionais
+#OPCIONAL vim
+#OPCIONAL htop
+#OPCIONAL pkg-config

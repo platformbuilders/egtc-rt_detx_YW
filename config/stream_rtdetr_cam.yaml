@@ -1,0 +1,201 @@
+########################################################################################
+#                                                                                      #
+#                                                                                      #
+#    ██████╗░██╗░░░██╗██╗██╗░░░░░██████╗░███████╗██████╗░░██████╗                      #
+#    ██╔══██╗██║░░░██║██║██║░░░░░██╔══██╗██╔════╝██╔══██╗██╔════╝░                     #
+#    ██████╦╝██║░░░██║██║██║░░░░░██║░░██║█████╗░░██████╔╝╚█████╗░░                     #
+#    ██╔══██╗██║░░░██║██║██║░░░░░██║░░██║██╔══╝░░██╔══██╗░╚═══██╗                      #
+#    ██████╦╝╚██████╔╝██║███████╗██████╔╝███████╗██║░░██║██████╔╝                      #
+#    ╚═════╝░░╚═════╝░╚═╝╚══════╝╚═════╝░╚══════╝╚═╝░░╚═╝╚═════╝░                      #
+#                                                                                      #
+#    → Builders – Construímos o futuro, linha por linha.                               #
+#    → https://paltformbuilders.io  |  contato@platformbuilders.io                     #
+#                                                                                      #
+########################################################################################
+
+# Configuração para pipeline RT-DETR-X + YOLO-World
+# Para RTSP, use o formato rtsp://usuario:senha@ip:porta/...
+# Para usar arquivos de vídeo locais (ex.: /videos/cam1.mp4) 
+
+
+# === CAMERAS ===
+# Cada câmera pode ter configuração individual de ROI e EPIs
+cameras:
+
+  - id: CAM061
+    uri: "rtsp://admin:nsa_sintese2025@10.163.8.61:554/Streaming/Channels/101/"
+    roi_path: "rois/roi_cam61.json"  # Caminho do arquivo ROI (opcional)
+    roi_polys:                        # Lista de polígonos ROI a usar (opcional)
+      - "roi1_epi1"        
+    roi_ppe_config:                   # Configuração de EPIs por ROI (opcional)
+      roi1_epi1:
+        - helmet
+
+  - id: CAM062
+    uri: "rtsp://admin:nsa_sintese2025@10.163.8.62:554/Streaming/Channels/101/"
+    roi_path: "rois/roi_cam62.json"  # Caminho do arquivo ROI (opcional)
+    roi_polys:                       # Lista de polígonos ROI a usar (opcional)
+      - "roi1_epi12"
+      - "roi2_epi1"
+    roi_ppe_config:                  # Configuração de EPIs por ROI (opcional)
+      roi1_epi12:
+        - helmet
+        - vest
+      roi2_epi1:
+        - helmet
+
+  - id: CAM063
+    uri: "rtsp://admin:nsa_sintese2025@10.163.8.63:554/Streaming/Channels/101/"
+    roi_path: "rois/roi_cam63.json"  # Caminho do arquivo ROI (opcional)
+    roi_polys:                       # Lista de polígonos ROI a usar (opcional)
+      - "roi1_epi12"
+    roi_ppe_config:                   # Configuração de EPIs por ROI (opcional)
+      roi1_epi12:
+        - helmet
+        - vest
+
+  - id: CAM064
+    uri: "rtsp://admin:nsa_sintese2025@10.163.8.64:554/Streaming/Channels/101/"
+    roi_path: "rois/roi_cam64.json"  # Caminho do arquivo ROI (opcional)
+    roi_polys:                       # Lista de polígonos ROI a usar (opcional)
+      - "roi1_epi123"
+      - "roi2_epi1"
+    roi_ppe_config:                  # Configuração de EPIs por ROI (opcional)
+      roi1_epi123:
+        - helmet
+        - vest 
+        - ear_protection
+      roi2_epi1:
+          - helmet
+
+# ==== Saída ====
+out_dir: "./out"
+save_video: true
+video_fps: 1           # gravação/atualização de imagem 1x/s
+
+# ==== Amostragem ====
+target_fps: 1.0        # 1 frame por segundo por câmera
+
+# ==== Otimização de Performance ====
+gpu_frame_scale: 0.75  # Escala do frame enviado para GPU (0.5-1.0). Reduz overhead de serialização/processamento.
+                       # 1.0 = resolução original, 0.75 = 75% da resolução, 0.5 = metade
+                       # Valores menores = mais rápido, mas pode reduzir precisão
+
+# ==== RT-DETR-X (detector de pessoas) ====
+# Modelos disponíveis: rtdetr-x.pt, rtdetr-l.pt, rtdetr-m.pt (via Ultralytics)
+rtdetr_weights: "rtdetr-l.pt"   # RT-DETR-L (tente L ou M se X não funcionar)
+rtdetr_imgsz: 960              # Tamanho de processamento (aumentado para melhor detecção)
+rtdetr_conf: 0.5                # Threshold de confiança (aumentado para filtrar detecções ruins e objetos como cones)
+rtdetr_iou: 0.45                # Threshold de IoU para NMS
+
+# Filtros de validação RT-DETR (ajustados para filtrar cones e objetos similares)
+rtdetr_min_area: 0.0005         # Área mínima relativa (0.05% do frame - aumenta para filtrar objetos pequenos como cones)
+rtdetr_max_area: 0.8            # Área máxima relativa (80% do frame)
+rtdetr_min_aspect_ratio: 0.4    # Aspect ratio mínimo (pessoas não são muito largas - filtra objetos muito largos)
+rtdetr_max_aspect_ratio: 3.5    # Aspect ratio máximo (cones são muito alongados > 4.0, pessoas geralmente < 3.5)
+rtdetr_min_height_px: 50        # Altura mínima em pixels (aumentado para filtrar objetos pequenos como cones)
+rtdetr_min_width_px: 20         # Largura mínima em pixels (aumentado para filtrar objetos muito estreitos)
+rtdetr_disable_filters: false   # Se true, desabilita TODOS os filtros
+
+# ==== Detector de EPIs (YOLO-World ou OWL-V2) ====
+ppe_detector: "owl-v2"      # "yolo-world" ou "owl-v2"
+
+# ==== Configurações YOLO-World ====
+# Modelos disponíveis: yolov8s-world.pt, yolov8m-world.pt, yolov8l-world.pt
+yw_model: "yolov8m-world.pt"    # YOLO-World Medium (balanceado)
+yw_fp16: true                   # Usar precisão half (FP16) se CUDA
+yw_score_thr: 0.15              # Threshold de confiança para EPIs (reduzido para melhor detecção de roupas)
+
+# Modo de processamento YOLO-World
+yw_use_crop: true               # Processar crops individuais de pessoas (melhor precisão para objetos pequenos)
+yw_crop_padding: 0.20           # Padding relativo ao redor do crop (20% - mais contexto)
+yw_min_crop_size: 32            # Tamanho mínimo do crop em pixels (reduzido para processar pessoas menores)
+yw_imgsz: 960                  # Tamanho de imagem para inferência (aumentado para melhor detecção de objetos pequenos)
+
+# ==== Configurações OWL-V2 ====
+# Modelos disponíveis: google/owlv2-base-patch16, google/owlv2-large-patch16
+ovd_model: "google/owlv2-base-patch16"  # OWL-V2 Base (mais rápido) ou Large (mais preciso)
+ovd_fp16: true                   # Usar precisão half (FP16) se CUDA
+ovd_score_thr: 0.26              # Threshold de confiança para EPIs
+ovd_cache_dir: "./.hf"           # Diretório para cache do modelo
+ovd_use_fast: true               # Usar processador rápido
+ovd_quantization_mode: "none"    # "none", "8bit", "4bit" (requer bitsandbytes)
+
+# ==== Dispositivo ====
+device: "cuda"                  # cuda ou cpu
+
+# ==== Heurísticas de zonas dentro do box da pessoa ====
+head_ratio: 0.45                # cabeça (0..head_ratio)
+chest_min_ratio: 0.25           # peito/torso (chest_min..chest_max) - AMPLIADO para melhor detecção
+chest_max_ratio: 0.85           # Zona ampliada cobre ombros até cintura
+
+# ==== Debounce de violação ====
+debounce_seconds: 8.0
+
+# ==== Tracking (ByteTrack) ====
+# Parâmetros para melhorar persistência de IDs e reduzir re-identificação
+track_thresh: 0.25          # Threshold mínimo de confiança para criar novo track
+match_thresh: 0.3           # Threshold de IoU para associar detecções (0.3 = mais permissivo, menos re-ID)
+track_buffer: 60            # Frames para manter track perdido antes de remover (60 = ~60s a 1 FPS)
+track_iou_thresh: 0.3       # Threshold IoU para fallback tracker (SimpleIoUTracker)
+track_max_age: 30           # Frames máximos sem detecção antes de remover (SimpleIoUTracker)
+
+# ==== Sistema de Alertas ====
+enable_alerts: true        # Habilita sistema de alertas com persistência em banco
+show_alert_grid: false      # Exibe grid 8x8 de alertas na tela (requer enable_alerts=true)
+alert_debounce_seconds: 15.0  # Tempo (segundos) para confirmar violação antes de gerar alerta
+alert_min_consecutive_frames: 20  # Frames consecutivos mínimos da MESMA PESSOA (track_id) sem EPI
+alert_suppression_reset_seconds: 20.0  # Tempo (segundos) sem violação para resetar supressão da região
+alert_hash_ttl_seconds: 60.0  # TTL do hash de violação (renovado enquanto violação persistir) para evitar alertas duplicados
+alert_grid_size: 8          # Tamanho do grid (8x8 = 64 células)
+timezone_offset_hours: -3.0  # Offset do timezone local (GMT-3 = -3.0, GMT+1 = 1.0, etc.)
+
+# Salvamento de imagens de alertas
+save_alert_images: true     # Se true, salva imagens de alertas
+save_crop_only: true        # Se true, salva apenas crop da pessoa; se false, salva frame completo
+crops_dir: crops            # Diretório para salvar crops/frames (relativo ao diretório do projeto)
+
+# ==== Métricas / Telemetria ====
+metrics_overlay: true
+metrics_csv: true
+metrics_print_every: 30  # imprime a cada N frames por câmera
+
+# ==== Visualização ====
+show_video: false          # Exibe vídeo em tempo real (requer display X11 ou similar)
+draw_roi: true           # Desenha ROI no vídeo
+show_rtdetr_boxes: true  # Exibe boxes laranjas das detecções brutas do RT-DETR-X
+
+# ==== EPIs obrigatórios por padrão ====
+# A CLI pode sobrescrever com --required-ppe
+#required_ppe: ["helmet", "gloves", "ear_protection", "vest"]
+
+# ==== EPIs obrigatórios por ROI (CONFIGURAÇÃO GLOBAL - usado como fallback) ====
+# Esta seção é usada apenas se a câmera não tiver sua própria configuração roi_ppe_config
+# Mapeia o nome do ROI (do arquivo JSON) para a lista de EPIs obrigatórios
+# 
+# Você pode especificar capacetes de cor específica:
+#   - helmet: aceita qualquer capacete (qualquer cor)
+#   - helmet_white: exige capacete branco
+#   - helmet_red: exige capacete vermelho
+#   - helmet_blue: exige capacete azul
+#   - helmet_yellow: exige capacete amarelo
+#   - helmet_brown: exige capacete marrom
+#
+# NOTA: Cada câmera pode ter sua própria configuração na seção cameras acima.
+# Se uma câmera não tiver roi_ppe_config definido, usa esta configuração global (se existir).
+#global_roi_ppe_config:
+#  roi_epi_on:
+#    - helmet
+#    - vest
+
+# ==== Supervisor (Multiprocessing) ====
+# Configurações para o sistema de orquestração multiprocessing
+supervisor_heartbeat_timeout: 30.0  # Timeout em segundos para considerar processo morto (default: 30s)
+supervisor_max_restarts: 5          # Máximo de reinicializações por processo em uma janela de tempo (default: 5)
+supervisor_restart_window: 3600.0   # Janela de tempo para contar reinicializações em segundos (default: 3600s = 1h)
+
+# ==== Streaming MJPEG (para WebApp) ====
+stream_enabled: true          # Habilita servidor HTTP para streaming MJPEG
+stream_port: 5000             # Porta do servidor HTTP
+stream_fps: 1                # FPS do stream (frames por segundo enviados via HTTP)
+stream_jpeg_quality: 85       # Qualidade JPEG (1-100, maior = melhor qualidade, mais dados)
