@@ -39,25 +39,36 @@ Sistema de detecção e monitoramento de EPIs em tempo real utilizando RT-DETR-X
 - Espaço em disco para vídeos e imagens de alertas - recomendamos uma partição /data separada)
 
 ### Software
+- Ubuntu Server Minimal versão 22.04
+- driver nVidia versão 535 (obrigatório manter esta versão)
+- CUDA 12.x (drivers serão instalados automaticamente)
 - Python 3.10 ou superior
-- CUDA 12.x
 - **Redis** (obrigatório para sistema de alertas - veja seção dedicada abaixo)
 - MySQL/PostgreSQL/Oracle (opcional, para persistência de alertas)
 
-## Pré-requisitos de infraestrutura
-
-Antes de instalar as bibliotecas e pacotes, é necessário instalar os pré-requisitos de infraestrutura do sistema alvo:
-- driver nVidia
-- MySQL Server
 
 ## 📦 Instalação
 
 ## 0. Instalação de pré-requisitos de infraestrutura
 
 ### 0.1 - Driver nVidia
+
 ```bash
-git clone <url-do-repositorio>
-cd egtc_detr
+sudo apt update
+sudo apt install ubuntu-drivers-common
+sudo apt install nvidia-driver-535
+```
+
+Após a instalação ser concluída, reinicie o sistema
+
+```bash
+sudo reboot
+```
+
+Teste a instalação do driver com:
+
+```bash
+nvidia-smi
 ```
 
 ### 1. Clone o repositório
