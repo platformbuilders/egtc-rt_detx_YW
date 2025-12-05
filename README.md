@@ -54,7 +54,7 @@ Antes de instalar as bibliotecas e pacotes, é necessário instalar os pré-requ
 
 ## 0. Instalação de pré-requisitos de infraestrutura
 
-# 0.1 - Driver nVidia
+### 0.1 - Driver nVidia
 ```bash
 git clone <url-do-repositorio>
 cd egtc_detr
