@@ -34,9 +34,9 @@ Sistema de detecção e monitoramento de EPIs em tempo real utilizando RT-DETR-X
 ## 🔧 Requisitos
 
 ### Hardware
-- GPU NVIDIA com suporte CUDA (recomendado)
-- Mínimo 8GB RAM
-- Espaço em disco para vídeos e imagens de alertas
+- GPU NVIDIA com suporte CUDA - Recomendamos modelos T4, T40, L40 ou similares. RTX 30XX e 40XX também são suportadas.
+- Mínimo 16GB RAM
+- Espaço em disco para vídeos e imagens de alertas - recomendamos uma partição /data separada)
 
 ### Software
 - Python 3.10 ou superior
