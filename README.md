@@ -40,11 +40,25 @@ Sistema de detecção e monitoramento de EPIs em tempo real utilizando RT-DETR-X
 
 ### Software
 - Python 3.10 ou superior
-- CUDA 12.x (se usar GPU)
+- CUDA 12.x
 - **Redis** (obrigatório para sistema de alertas - veja seção dedicada abaixo)
 - MySQL/PostgreSQL/Oracle (opcional, para persistência de alertas)
 
+## Pré-requisitos de infraestrutura
+
+Antes de instalar as bibliotecas e pacotes, é necessário instalar os pré-requisitos de infraestrutura do sistema alvo:
+- driver nVidia
+- MySQL Server
+
 ## 📦 Instalação
+
+## 0. Instalação de pré-requisitos de infraestrutura
+
+# 0.1 - Driver nVidia
+```bash
+git clone <url-do-repositorio>
+cd egtc_detr
+```
 
 ### 1. Clone o repositório
 
