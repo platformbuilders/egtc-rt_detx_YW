@@ -70,6 +70,7 @@ Teste a instalação do driver com:
 ```bash
 nvidia-smi
 ```
+
 Você deverá receber uma tela com a versão do driver, o modelo da placa e outras informações
 
 ```bash
@@ -93,7 +94,6 @@ Você deverá receber uma tela com a versão do driver, o modelo da placa e outr
 |                                                                                       |
 |                                                                                       |
 +---------------------------------------------------------------------------------------+
-
 ```
 
 ### 1. Clone o repositório
